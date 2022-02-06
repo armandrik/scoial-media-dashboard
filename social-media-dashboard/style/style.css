@@ -1,0 +1,918 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: 'Inter', sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 25vh;
+  background-color: #f5f7ff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .dashboard-container {
+  width: 55%;
+  padding: 36px 0 0 100px;
+}
+
+header .dashboard-container h2 {
+  color: #1e202a;
+}
+
+header .dashboard-container p {
+  color: #63687e;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+header .dark-mode-container {
+  width: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 36px 100px 0 0;
+}
+
+header .dark-mode-container p {
+  color: #63687e;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 1px 10px 0 0;
+}
+
+header .dark-mode-container .input-1 {
+  display: none;
+}
+
+header .dark-mode-container .input-1:checked + .label-1 {
+  background: -webkit-gradient(linear, left top, right top, from(#378fe6), to(#3eda82));
+  background: linear-gradient(90deg, #378fe6, #3eda82);
+}
+
+header .dark-mode-container .input-1:checked + .label-1::after {
+  background-color: #1f212e;
+  -webkit-transform: translateX(21px);
+          transform: translateX(21px);
+}
+
+header .dark-mode-container .checkbox-label {
+  width: 41px;
+  height: 19px;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  display: inline-block;
+  border-radius: 14px;
+  position: relative;
+  cursor: pointer;
+}
+
+header .dark-mode-container .checkbox-label::after {
+  content: '';
+  width: 15px;
+  height: 15px;
+  border-radius: 20px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+header .dark-mode-container .label-1 {
+  background: gray;
+}
+
+header .dark-mode-container .label-1::after {
+  background-color: #fcfcfc;
+}
+
+.basic-social-style, .social-info-container .facebook, .social-info-container .twitter, .social-info-container .instagram, .social-info-container .youtube {
+  width: clamp(280px, 1%, 300px);
+  height: 27vh;
+  background-color: #f0f2fa;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.follower-num, .social-info-container .facebook .follower-num, .social-info-container .twitter .follower-num, .social-info-container .instagram .follower-num, .social-info-container .youtube .follower-num {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.follower-num h1, .social-info-container .facebook .follower-num h1, .social-info-container .twitter .follower-num h1, .social-info-container .instagram .follower-num h1, .social-info-container .youtube .follower-num h1 {
+  font-size: 56px;
+}
+
+.follower-num p, .social-info-container .facebook .follower-num p, .social-info-container .twitter .follower-num p, .social-info-container .instagram .follower-num p, .social-info-container .youtube .follower-num p {
+  letter-spacing: 5px;
+  color: #63687e;
+  font-size: 14px;
+}
+
+.foolower-count, .social-info-container .facebook .foolower-count, .social-info-container .twitter .foolower-count, .social-info-container .instagram .foolower-count {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.foolower-count img, .social-info-container .facebook .foolower-count img, .social-info-container .twitter .foolower-count img, .social-info-container .instagram .foolower-count img {
+  width: 8px;
+  height: 5px;
+  margin-right: 5px;
+}
+
+.foolower-count h4, .social-info-container .facebook .foolower-count h4, .social-info-container .twitter .foolower-count h4, .social-info-container .instagram .foolower-count h4 {
+  color: #1db489;
+  font-size: 11px;
+}
+
+.hover, .social-info-container .facebook:hover, .social-info-container .twitter:hover, .social-info-container .instagram:hover, .social-info-container .youtube:hover, .overview-container .facebook-overview:hover, .overview-container .facebook-like:hover, .overview-container .instagram-like:hover, .overview-container .instagram-view:hover, .overview-container .retweets:hover, .overview-container .twitter-like:hover, .overview-container .youtube-like:hover, .overview-container .youtube-view:hover {
+  background-color: #e9ebf1;
+}
+
+.social-info-container {
+  width: 100%;
+  height: 23vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: -80px;
+}
+
+.social-info-container .facebook {
+  border-top: 4px solid #198ff5;
+}
+
+.social-info-container .facebook .face-icon {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.social-info-container .facebook .face-icon p {
+  color: #63687e;
+  margin-left: 10px;
+}
+
+.social-info-container .twitter {
+  border-top: 4px solid #1ca0f2;
+}
+
+.social-info-container .twitter .twitter-icon {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.social-info-container .twitter .twitter-icon p {
+  color: #63687e;
+  margin-left: 10px;
+}
+
+.social-info-container .instagram {
+  border-top: 4px solid;
+  -o-border-image: linear-gradient(to right, #fdc468, #df4996);
+     border-image: -webkit-gradient(linear, left top, right top, from(#fdc468), to(#df4996));
+     border-image: linear-gradient(to right, #fdc468, #df4996);
+  border-image-slice: 1;
+}
+
+.social-info-container .instagram .instagram-icon {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.social-info-container .instagram .instagram-icon p {
+  color: #63687e;
+  margin-left: 10px;
+}
+
+.social-info-container .youtube {
+  border-top: 4px solid #c4032a;
+}
+
+.social-info-container .youtube .youtube-icon {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.social-info-container .youtube .youtube-icon p {
+  color: #63687e;
+  margin-left: 10px;
+}
+
+.social-info-container .youtube .foolower-count {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social-info-container .youtube .foolower-count img {
+  width: 8px;
+  height: 5px;
+  margin-right: 5px;
+}
+
+.social-info-container .youtube .foolower-count h4 {
+  color: #dc414c;
+  font-size: 11px;
+}
+
+.overview-header {
+  width: 100%;
+  height: 5vh;
+  margin-top: 100px;
+}
+
+.overview-header h2 {
+  color: #63687e;
+  padding-left: 2%;
+}
+
+.overview-container {
+  width: 100%;
+  height: 40vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.overview-container .facebook-overview {
+  width: clamp(280px, 1%, 300px);
+  height: 16vh;
+  background-color: #f0f2fa;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.overview-container .facebook-overview .pages-views {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.overview-container .facebook-overview .pages-views p {
+  color: #63687e;
+  margin-right: 25px;
+}
+
+.overview-container .facebook-overview .page-view-grow {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.overview-container .facebook-overview .page-view-grow h1 {
+  margin-right: 70px;
+}
+
+.overview-container .facebook-overview .page-view-grow .gorw-num {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.overview-container .facebook-overview .page-view-grow .gorw-num img {
+  width: 8px;
+  height: 5px;
+}
+
+.overview-container .facebook-overview .page-view-grow .gorw-num p {
+  color: #1db489;
+  font-size: 13px;
+}
+
+.overview-container .facebook-like {
+  width: clamp(280px, 1%, 300px);
+  height: 16vh;
+  background-color: #f0f2fa;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.overview-container .facebook-like .pages-likes {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.overview-container .facebook-like .pages-likes p {
+  color: #63687e;
+  margin-right: 85px;
+}
+
+.overview-container .facebook-like .page-like-grow {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.overview-container .facebook-like .page-like-grow h1 {
+  margin-right: 70px;
+}
+
+.overview-container .facebook-like .page-like-grow .gorw-num {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.overview-container .facebook-like .page-like-grow .gorw-num img {
+  width: 8px;
+  height: 5px;
+}
+
+.overview-container .facebook-like .page-like-grow .gorw-num p {
+  color: #dc414c;
+  font-size: 13px;
+}
+
+.overview-container .instagram-like {
+  width: clamp(280px, 1%, 300px);
+  height: 16vh;
+  background-color: #f0f2fa;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.overview-container .instagram-like .pages-likes {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.overview-container .instagram-like .pages-likes p {
+  color: #63687e;
+  margin-right: 85px;
+}
+
+.overview-container .instagram-like .page-like-grow {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.overview-container .instagram-like .page-like-grow h1 {
+  margin-right: 70px;
+}
+
+.overview-container .instagram-like .page-like-grow .gorw-num {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.overview-container .instagram-like .page-like-grow .gorw-num img {
+  width: 8px;
+  height: 5px;
+}
+
+.overview-container .instagram-like .page-like-grow .gorw-num p {
+  color: #1db489;
+  font-size: 13px;
+}
+
+.overview-container .instagram-view {
+  width: clamp(280px, 1%, 300px);
+  height: 16vh;
+  background-color: #f0f2fa;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.overview-container .instagram-view .profile-view {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.overview-container .instagram-view .profile-view p {
+  color: #63687e;
+  margin-right: 40px;
+}
+
+.overview-container .instagram-view .page-profile-grow {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.overview-container .instagram-view .page-profile-grow h1 {
+  margin-right: 70px;
+}
+
+.overview-container .instagram-view .page-profile-grow .gorw-num {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.overview-container .instagram-view .page-profile-grow .gorw-num img {
+  width: 8px;
+  height: 5px;
+}
+
+.overview-container .instagram-view .page-profile-grow .gorw-num p {
+  color: #1db489;
+  font-size: 13px;
+}
+
+.overview-container .retweets {
+  width: clamp(280px, 1%, 300px);
+  height: 16vh;
+  background-color: #f0f2fa;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.overview-container .retweets .retweets-view {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.overview-container .retweets .retweets-view p {
+  color: #63687e;
+  margin-right: 75px;
+}
+
+.overview-container .retweets .retweets-grow {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.overview-container .retweets .retweets-grow h1 {
+  margin-right: 70px;
+}
+
+.overview-container .retweets .retweets-grow .gorw-num {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.overview-container .retweets .retweets-grow .gorw-num img {
+  width: 8px;
+  height: 5px;
+}
+
+.overview-container .retweets .retweets-grow .gorw-num p {
+  color: #1db489;
+  font-size: 13px;
+}
+
+.overview-container .twitter-like {
+  width: clamp(280px, 1%, 300px);
+  height: 16vh;
+  background-color: #f0f2fa;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.overview-container .twitter-like .pages-likes {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.overview-container .twitter-like .pages-likes p {
+  color: #63687e;
+  margin-right: 85px;
+}
+
+.overview-container .twitter-like .page-like-grow {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.overview-container .twitter-like .page-like-grow h1 {
+  margin-right: 70px;
+}
+
+.overview-container .twitter-like .page-like-grow .gorw-num {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.overview-container .twitter-like .page-like-grow .gorw-num img {
+  width: 8px;
+  height: 5px;
+}
+
+.overview-container .twitter-like .page-like-grow .gorw-num p {
+  color: #1db489;
+  font-size: 13px;
+}
+
+.overview-container .youtube-like {
+  width: clamp(280px, 1%, 300px);
+  height: 16vh;
+  background-color: #f0f2fa;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.overview-container .youtube-like .youtube-likes {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.overview-container .youtube-like .youtube-likes p {
+  color: #63687e;
+  margin-right: 85px;
+}
+
+.overview-container .youtube-like .youtube-like-grow {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.overview-container .youtube-like .youtube-like-grow h1 {
+  margin-right: 70px;
+}
+
+.overview-container .youtube-like .youtube-like-grow .gorw-num {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.overview-container .youtube-like .youtube-like-grow .gorw-num img {
+  width: 8px;
+  height: 5px;
+}
+
+.overview-container .youtube-like .youtube-like-grow .gorw-num p {
+  color: #dc414c;
+  font-size: 13px;
+}
+
+.overview-container .youtube-view {
+  width: clamp(280px, 1%, 300px);
+  height: 16vh;
+  background-color: #f0f2fa;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.overview-container .youtube-view .total-view {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.overview-container .youtube-view .total-view p {
+  color: #63687e;
+  margin-right: 85px;
+}
+
+.overview-container .youtube-view .youtube-like-grow {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.overview-container .youtube-view .youtube-like-grow h1 {
+  margin-right: 70px;
+}
+
+.overview-container .youtube-view .youtube-like-grow .gorw-num {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.overview-container .youtube-view .youtube-like-grow .gorw-num img {
+  width: 8px;
+  height: 5px;
+}
+
+.overview-container .youtube-view .youtube-like-grow .gorw-num p {
+  color: #dc414c;
+  font-size: 13px;
+}
+
+@media screen and (max-width: 690px) {
+  header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header .dashboard-container {
+    text-align: center;
+    padding: 30px 0;
+    width: 100%;
+  }
+  header .dark-mode-container {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 20px 0;
+    margin: auto;
+  }
+  .social-info-container {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 1119px) {
+  .overview-container div {
+    margin: 15px 0;
+  }
+  .overview-header {
+    margin-top: 300px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .overview-container {
+    margin-top: 10px;
+  }
+  .overview-header {
+    margin-top: 820px;
+    text-align: center;
+  }
+  .overview-header h2 {
+    padding: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */
